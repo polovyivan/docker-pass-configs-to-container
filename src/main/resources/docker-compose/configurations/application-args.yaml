@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /docker-pass-env-var-to-container
+
+app:
+  name: env-app-loc-as-java-args-file
+
+spring:
+  profiles:
+    active: ${PROFILE:loc-as-java-args-file}
+  datasource:
+    url: jdbc:mysql://localhost:3306/loc-as-java-args-file
+
+management:
+  endpoint:
+    health:
+      show-components: always
+  endpoints:
+    web:
+      base-path: /v1/actuator-loc-as-java-args-file
+      exposure:
+        include: actuator,logfile,metrics,health,info

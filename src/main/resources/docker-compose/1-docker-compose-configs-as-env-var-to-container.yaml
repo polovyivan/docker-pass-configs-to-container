@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  env-app:
+    image: configs-app:latest
+    ports:
+      - "8080:8080"
+    environment:
+      PROFILE: loc-as-container-env-var
+      APP_NAME: env-app-as-container-env-var
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/local-as-container-env-var
+      MANAGEMENT_ENDPOINTS_WEB_BASE_PATH: /v1/actuator-as-container-env-var

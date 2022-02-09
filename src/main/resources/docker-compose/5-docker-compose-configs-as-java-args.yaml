@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  env-app:
+    image: configs-app:latest
+    ports:
+      - "8080:8080"
+    environment:
+      ARGS: >
+        --PROFILE=loc-as-java-args
+        --app.name=env-app-loc-as-java-args
+        --spring.datasource.url=jdbc:mysql://localhost:3306/local-as-java-args
+        --management.endpoints.web.base-path=/v1/actuator-as-java-args

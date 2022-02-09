@@ -1,0 +1,4 @@
+PROFILE=loc-as-container-env-var-file
+APP_NAME=env-app-as-container-env-var-file
+SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/local-as-container-env-var-file
+MANAGEMENT_ENDPOINTS_WEB_BASE_PATH=/v1/actuator-as-container-env-var-file

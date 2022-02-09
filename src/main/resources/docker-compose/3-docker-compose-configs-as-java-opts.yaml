@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  env-app:
+    image: configs-app:latest
+    ports:
+      - "8080:8080"
+    environment:
+      JAVA_OPTS: >
+        -DPROFILE=loc-as-java-opts
+        -Dapp.name=env-app-as-java-opts
+        -Dspring.datasource.url=jdbc:mysql://localhost:3306/local-as-java-opts
+        -Dmanagement.endpoints.web.base-path=/v1/actuator-as-java-opts
